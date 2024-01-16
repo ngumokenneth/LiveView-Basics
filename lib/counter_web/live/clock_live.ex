@@ -9,9 +9,9 @@ defmodule CounterWeb.ClockLive do
 
   def render(assigns) do
     ~H"""
-    <h1 class="text-3xl font-bold">Clock: <span class="text-rose-900 font-bold "><%= @count %></span></h1>
-
-
+    <h1 class="text-3xl font-bold">
+      Clock: <span class="text-rose-900 font-bold "><%= @count %></span>
+    </h1>
     """
   end
 

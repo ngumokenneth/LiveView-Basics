@@ -15,11 +15,11 @@ defmodule CounterWeb.CounterLive do
     {:ok, assign(socket, :count, 0)}
   end
 
-
   def handle_event("add", _unsigned_params, socket) do
     new_count = socket.assigns.count + 1
     {:noreply, assign(socket, count: new_count)}
   end
+
   def handle_event("subtract", _unsigned_params, socket) do
     new_count = socket.assigns.count - 1
     {:noreply, assign(socket, count: new_count)}
