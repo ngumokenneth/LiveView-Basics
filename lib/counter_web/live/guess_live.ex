@@ -4,17 +4,7 @@ defmodule CounterWeb.GuessLive do
   the live view will send message back.
   """
   use CounterWeb, :live_view
-
-  def render(assigns) do
-    ~H"""
-    <h1>Your Score: <%= @score %></h1>
-    <div>
-      <%= for n <- 1..10  do %>
-        <.link phx-click="guess" phx-value-number={n}><%= n %></.link>
-      <% end %>
-    </div>
-    """
-  end
+  on_mount CounterWeb.HooksLive
 
   def mount(_params, _session, socket) do
     {:ok, assign(socket, score: 0, correct_guess: 5)}

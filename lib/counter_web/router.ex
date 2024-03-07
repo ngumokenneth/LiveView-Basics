@@ -21,6 +21,9 @@ defmodule CounterWeb.Router do
     live "/counter", CounterLive
     live "/guess", GuessLive
     live "/clock", ClockLive
+    live "/hooks", HooksLive
+    live "/message", MessageLive
+    live "/form", FormLive
   end
 
   # Other scopes may use custom stacks.

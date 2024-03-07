@@ -1,0 +1,6 @@
+<h1>Your Score: <%= @score %></h1>
+<div>
+  <%= for n <- 1..10  do %>
+    <.link phx-click="guess" phx-value-number={n}><%= n %></.link>
+  <% end %>
+</div>
